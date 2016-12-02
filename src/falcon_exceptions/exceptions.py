@@ -1,5 +1,3 @@
-import os
-import json
 
 
 class HTTPException(Exception):
@@ -24,5 +22,5 @@ class HTTPException(Exception):
         if ex.more_info:
             response.update({ "moreInfo": ex.more_info })
 
-        resp.body = json.dumps(response)
+        resp.body = response
         resp.status = str(ex.status_code)
