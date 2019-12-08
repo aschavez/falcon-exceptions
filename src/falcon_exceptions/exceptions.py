@@ -1,5 +1,4 @@
 
-
 class HTTPException(Exception):
 
     def __init__(self, status_code, dev_msg="", user_msg="", error_code="",
@@ -24,3 +23,11 @@ class HTTPException(Exception):
 
         resp.body = response
         resp.status = str(ex.status_code)
+
+    def __str__(self):
+        return "=== Start raising HTTPException ===\n" \
+               "-> status_code = {0}\n" \
+               "-> dev_msg = {1}\n" \
+               "-> user_msg = {2}\n" \
+               "=== End raising HTTPException ===".format(
+            self.status_code, self.dev_msg, self.user_msg)
