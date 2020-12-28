@@ -13,8 +13,8 @@ setup(
     package_dir = {"":"src"},
     packages = find_packages("src"),
     install_requires=["falcon"],
-    author = 'DevTeam RCP',
-    author_email = 'devteam@rcp.pe',
-    url = 'https://git.rcp.pe/devteam/falcon-exceptions',
+    author = 'Andres Chavez',
+    author_email = 'aschavezu@gmail.com',
+    url = 'https://github.com/aschavez/falcon-exceptions',
     keywords = ['falcon', 'exceptions']
 )
